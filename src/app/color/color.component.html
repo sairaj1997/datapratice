@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>Users from JSONPlaceHolder</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>POSTID</td>
+                <td>ID</td>
+                <td>EMAIL</td>
+                <td>NAME</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of color">
+                <td>{{c.postId}}</td>
+                <td>{{c.id}}</td>
+                <td>{{c.email}}</td>
+                <td>{{c.name}}</td>
+             
+            </tr>
+        </tbody>
+    </table>
+</div>
