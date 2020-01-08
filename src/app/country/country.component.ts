@@ -9,13 +9,22 @@ import {DataService} from '../data.service';
 })
 export class CountryComponent implements OnInit {
   countries:any=[];
+  st:number = 100;
+
 
   constructor(private ds:DataService) { }
 
   ngOnInit() {
     this.ds.getCountries().subscribe(d=>{
       this.countries=d;
+
+      
     })
+    
   }
+  next(){
+    this.st+=10;
+  }
+  
 
 }

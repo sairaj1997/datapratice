@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import{DataService}from '../data.service'
+import { DataService } from '../data.service'
+
+
+
 
 @Component({
   selector: 'app-color',
@@ -7,12 +10,19 @@ import{DataService}from '../data.service'
   styleUrls: ['./color.component.css']
 })
 export class ColorComponent implements OnInit {
-color:any=[];
-  constructor(private tr:DataService) { }
+  color: any = [];
+  color10:any = [];
+  constructor(private tr: DataService) { }
 
   ngOnInit() {
-    this.tr.getcolor().subscribe(d=>{
-      this.color=d;
+    this.tr.getcolor().subscribe(d => {
+      this.color = d;
+      for(let i=0;i<10;i++){
+        //console.log(this.color[i].name);
+        this.color10.push(this.color[i]);
+
+      }
+      
     })
   }
 
